@@ -38,4 +38,35 @@ func main (){
 		fmt.Println(daysBaru)
 		fmt.Println(days)  
 
-	}
+		newSlice := make ([]string ,2,5)
+		newSlice[0]= "Pablo"
+		newSlice[1]= "Zbap"
+		// newSlice[2]= "Fadli" -> ini error 
+
+		newSlice2 := append(newSlice,"Fadli")
+
+		fmt.Println(newSlice2)
+		fmt.Println(len(newSlice2))
+		fmt.Println(cap(newSlice2))
+
+		newSlice2[0] = "Amel"
+		fmt.Println(newSlice2)
+		fmt.Println(newSlice)
+
+		fromSlice := days[:]
+		toSlice := make([]string, len(fromSlice), cap(fromSlice))
+
+		copy(toSlice, fromSlice)
+		
+		fmt.Println(fromSlice)
+		fmt.Println(toSlice)
+
+		iniArray := [...]string{"Mochamad", "Fadli", "Rudiansyah"}
+		iniSlice := []string{"Mochamad", "Fadli", "Rudiansyah"}
+
+		fmt.Println(iniArray)
+		fmt.Println(iniSlice)
+
+		//istritirahat kita lanjuut ke tipe data map
+
+	}  
